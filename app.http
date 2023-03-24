@@ -1,0 +1,69 @@
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "vijenderchimma",
+    "password": "vijju@424"
+}
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "vijenderchimma",
+    "name": "Chimma Vijender",
+    "password": "vijju@424",
+    "gender": "Male",
+    "location": "Hyderabad"
+
+}
+###
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpamVuZGVyY2hpbW1hIiwiaWF0IjoxNjc5NjUxODAxfQ.j7IaIyzE19FxT-tej91KGJ71BceED5ZUyoIeLw10sUM
+
+###
+
+GET http://localhost:3000/states/3/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpamVuZGVyY2hpbW1hIiwiaWF0IjoxNjc5NjUxODAxfQ.j7IaIyzE19FxT-tej91KGJ71BceED5ZUyoIeLw10sUM
+###
+
+POST http://localhost:3000/districts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpamVuZGVyY2hpbW1hIiwiaWF0IjoxNjc5NjUxODAxfQ.j7IaIyzE19FxT-tej91KGJ71BceED5ZUyoIeLw10sUM
+Content-Type: application/json
+
+{
+    "districtName": "MULUGU",
+    "stateId": 29,
+    "cases": 2323,
+    "cured": 2000,
+    "active": 315,
+    "deaths": 8
+}
+###
+
+GET http://localhost:3000/districts/3/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpamVuZGVyY2hpbW1hIiwiaWF0IjoxNjc5NjUxODAxfQ.j7IaIyzE19FxT-tej91KGJ71BceED5ZUyoIeLw10sUM
+###
+
+PUT http://localhost:3000/districts/4/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpamVuZGVyY2hpbW1hIiwiaWF0IjoxNjc5NjUxODAxfQ.j7IaIyzE19FxT-tej91KGJ71BceED5ZUyoIeLw10sUM
+Content-Type: application/json
+
+{
+    "districtName": "MULUGU",
+    "stateId": 29,
+    "cases": 2323,
+    "cured": 2000,
+    "active": 315,
+    "deaths": 8
+}
+###
+
+GET http://localhost:3000/states/4/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpamVuZGVyY2hpbW1hIiwiaWF0IjoxNjc5NjUxODAxfQ.j7IaIyzE19FxT-tej91KGJ71BceED5ZUyoIeLw10sUM
+###
+
+DELETE http://localhost:3000/districts/4/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpamVuZGVyY2hpbW1hIiwiaWF0IjoxNjc5NjUxODAxfQ.j7IaIyzE19FxT-tej91KGJ71BceED5ZUyoIeLw10sUM
